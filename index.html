@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umair Malik - Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .navbar ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+    .navbar ul li a:hover {
+      background-color: #575757;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+    .hero-left h1 {
+      font-size: 3rem;
+    }
+    .hero-left p {
+      font-size: 1.2rem;
+    }
+    .hero-right img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .hero-right img:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer-social a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .footer-social a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="about.html" class="nav-link">About Me</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="skills.html" class="nav-link">Skills</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- Left Side: Name and Introduction -->
+      <div class="hero-left">
+        <h1>Umair Malik</h1>
+        <p>Data Analyst | AI Enthusiast | Web Developer</p>
+        <p>Welcome to my portfolio! I'm a passionate data analyst with a strong background in AI and web development. My goal is to transform raw data into actionable insights and innovative solutions.</p>
+        <p>With hands-on experience in Python, SQL, and machine learning, I am always eager to dive deep into data and solve complex problems. Whether it's optimizing business processes or developing interactive web applications, I enjoy the challenge!</p>
+      </div>
+
+      <!-- Right Side: Profile Picture -->
+      <div class="hero-right">
+        <img src="images/WhatsApp Image 2024-05-17 at 5.41.40 AM.jpeg" alt="Umair Malik's Profile Picture" class="profile-pic" id="profile-pic">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Umair Malik | All Rights Reserved</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/umair-mal" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:umair.malik@example.com" target="_blank" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/umair-malik" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Button Functionality -->
+  <script>
+    // Animation for Profile Picture (Fade In)
+    window.addEventListener('load', () => {
+      const profilePic = document.getElementById('profile-pic');
+      profilePic.style.opacity = 0;
+      profilePic.style.transition = "opacity 1.5s ease-in-out";
+      setTimeout(() => {
+        profilePic.style.opacity = 1;
+      }, 500);
+    });
+  </script>
+</body>
+</html>

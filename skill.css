@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background for the whole page */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333; /* Dark background for the container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: black;}
+    h1:hover{
+       color: white;
+        transform: scale(1.05);
+     
+    }
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+
+
+/* Grid Layout for Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 20px;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Card Styling */
+.card {
+    background-color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
+    animation: slideIn 1s ease-out;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2); /* Slightly brightens the card */
+}
+
+/* Glowing effect for text inside card on hover */
+.card:hover h3, 
+.card:hover p, 
+.card:hover ul li {
+    color: #fff; /* Bright white color */
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8), 
+                 0px 0px 25px rgba(255, 255, 255, 0.6); /* Glowing text */
+}
+
+/* Delay animation for each card */
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Title Styling */
+.card h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Glowing effect for title on hover */
+.card h3:hover {
+    color: #f1f1f1;
+    text-shadow: 0px 0px 15px rgba(0, 0, 255, 0.8), 
+                 0px 0px 25px rgba(0, 0, 255, 0.6); 
+}
+
+/* Card List Styling */
+.card ul {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Adjust 'Back to Home' button */
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #4682b9;
+     transform: scale(1.05);
+  box-shadow: 0px 0px 8px #4682b4, 0px 0px 15px #4682b4;
+  }

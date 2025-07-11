@@ -1,0 +1,148 @@
+/* General styling */
+body {
+    font-family: 'Lora', serif; /* Elegant Serif font */
+    background-color: #0d0d0d; /* Darker background for a sleek look */
+    color: #f1f1f1; /* Light text for readability */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 15px; /* Softer rounded corners for elegance */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ffd700; /* Golden color for a luxury feel */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #e0e0e0;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: translateY(-5px); /* Lift effect */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  /* Grid Layout for Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 20px;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  /* Card Styling */
+  .project-card {
+    background-color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .project-card h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .project-card p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    filter: brightness(1.2); /* Slightly brightens the card */
+  }
+  
+  /* Luxury Hover Effect for Project Cards */
+  .project-card:hover h2 {
+    color: #f1f1f1;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 1); /* Golden glow effect */
+  }
+  
+  /* Centering only the last card */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+  }
+  
+  .projects-grid .project-card:last-child {
+    grid-column: span 1; /* Ensures it takes 1 column */
+    grid-row: auto; /* Resets row span for proper centering */
+    justify-self: center; /* Center last card horizontally */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

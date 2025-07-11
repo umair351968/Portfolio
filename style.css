@@ -1,0 +1,177 @@
+/* General Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Solid black background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container Styling */
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #1e90ff;
+    text-shadow: 0px 0px 5px #1e90ff, 0px 0px 10px #1e90ff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  h1:hover {
+    color: #4682b4;
+  }
+  
+  /* Paragraph Styling */
+  p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #ccc;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    animation: fadeInText 1.5s ease-in;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #1e90ff; /* Initial blue color */
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 5px #1e90ff, 0px 0px 10px #1e90ff;
+  }
+  
+  button:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #4682b4, 0px 0px 15px #4682b4;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px #4682b4;
+  }
+  
+  /* Link Button Styling */
+  .project a, footer a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project a:hover, footer a:hover {
+    color: #4682b4;
+    text-shadow: 0px 0px 5px #4682b4;
+  }
+  
+  /* Input and Textarea Styling */
+  form label {
+    color: #ccc;
+    font-size: 1em;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #1e90ff;
+    box-shadow: 0px 0px 5px #1e90ff;
+    outline: none;
+  }
+  
+  /* Form Button */
+  form button {
+    padding: 10px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #4682b4;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #4682b4, 0px 0px 15px #4682b4;
+  }
+  
+  form button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Footer Styling */
+  footer {
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #4682b4;
+  }
+  
