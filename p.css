@@ -1,148 +1,131 @@
-/* General styling */
 body {
-    font-family: 'Lora', serif; /* Elegant Serif font */
-    background-color: #0d0d0d; /* Darker background for a sleek look */
-    color: #f1f1f1; /* Light text for readability */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 15px; /* Softer rounded corners for elegance */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 2s ease-out;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #ffd700; /* Golden color for a luxury feel */
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    animation: fadeInUp 1.5s ease-out;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: center;
-    color: #e0e0e0;
-    animation: fadeInUp 2s ease-out;
-  }
-  
-  button {
-    display: block;
-    margin: 30px auto;
-    padding: 12px 30px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  button:hover {
-    background-color: #45a049;
-    transform: translateY(-5px); /* Lift effect */
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  /* Grid Layout for Projects */
+  font-family: 'Lora', serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #a1c4fd 50%, #c2e9fb 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(120deg, #fff 80%, #e0e7ef 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.12);
+  padding: 40px 32px 32px 32px;
+  border: 2px solid #38bdf8;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2563eb;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+p {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    padding: 20px;
-    animation: fadeInUp 2s ease-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.project-card {
+  background: #f7fafc;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(60, 72, 100, 0.08);
+  padding: 28px 22px 22px 22px;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2.5px solid #38bdf8;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.16);
+  background: #e0f2fe;
+  border-color: #6366f1;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: #2563eb;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-card p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
+  transition: background 0.18s, transform 0.18s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 18px 4vw 18px 4vw;
   }
-  
-  /* Card Styling */
-  .project-card {
-    background-color: #333;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
-    animation: slideIn 1s ease-out;
+  h1 {
+    font-size: 2rem;
   }
-  
-  .project-card h2 {
-    color: #ffd700;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .project-card p {
-    color: #ccc;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    filter: brightness(1.2); /* Slightly brightens the card */
-  }
-  
-  /* Luxury Hover Effect for Project Cards */
-  .project-card:hover h2 {
-    color: #f1f1f1;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 1); /* Golden glow effect */
-  }
-  
-  /* Centering only the last card */
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: auto;
+    gap: 16px;
   }
-  
-  .projects-grid .project-card:last-child {
-    grid-column: span 1; /* Ensures it takes 1 column */
-    grid-row: auto; /* Resets row span for proper centering */
-    justify-self: center; /* Center last card horizontally */
+  .project-card {
+    padding: 18px 10px 12px 10px;
   }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  button {
+    width: 100%;
+    font-size: 1rem;
   }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
   

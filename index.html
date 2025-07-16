@@ -104,6 +104,26 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <!-- Animated Bubbles/Particles Background -->
+    <div class="bubbles">
+      <div class="bubble" style="left:10vw; width:32px; height:32px; animation-delay:0s;"></div>
+      <div class="bubble" style="left:25vw; width:18px; height:18px; animation-delay:2s;"></div>
+      <div class="bubble" style="left:40vw; width:24px; height:24px; animation-delay:1s;"></div>
+      <div class="bubble" style="left:60vw; width:40px; height:40px; animation-delay:3s;"></div>
+      <div class="bubble" style="left:75vw; width:22px; height:22px; animation-delay:1.5s;"></div>
+      <div class="bubble" style="left:85vw; width:28px; height:28px; animation-delay:0.5s;"></div>
+      <div class="bubble" style="left:50vw; width:36px; height:36px; animation-delay:2.5s;"></div>
+    </div>
+    <!-- Floating SVG Shape for background accent -->
+    <svg class="hero-bg-shape" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="shapeGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="100%" stop-color="#6366f1"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#shapeGradient)" d="M44.8,-67.2C57.2,-59.2,65.7,-44.2,70.2,-28.7C74.7,-13.2,75.2,2.8,70.2,16.7C65.2,30.6,54.7,42.4,41.7,51.2C28.7,60,14.3,65.8,-1.2,67.3C-16.7,68.8,-33.4,66,-45.2,56.7C-57,47.4,-63.8,31.6,-67.2,15.1C-70.6,-1.4,-70.6,-18.6,-62.7,-30.7C-54.8,-42.8,-39.1,-49.8,-23.7,-56.2C-8.3,-62.6,6.8,-68.3,21.7,-70.2C36.6,-72.1,51.3,-70.2,44.8,-67.2Z" transform="translate(100 100)"/>
+    </svg>
     <div class="hero-content">
       <!-- Left Side: Name and Introduction -->
       <div class="hero-left">
@@ -119,24 +139,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Umair Malik | All Rights Reserved</p>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/umair-mal" target="_blank" class="social-link">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:umair.malik@example.com" target="_blank" class="social-link">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/umair-malik" target="_blank" class="social-link">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
 
   <!-- JavaScript for Button Functionality -->
   <script>

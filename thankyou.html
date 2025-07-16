@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Umair Malik</title>
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    .thankyou-container {
+      max-width: 500px;
+      margin: 80px auto;
+      background: linear-gradient(120deg, #fff 80%, #e0e7ef 100%);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(60, 72, 100, 0.12);
+      padding: 48px 32px 40px 32px;
+      border: 2px solid #38bdf8;
+      text-align: center;
+    }
+    .thankyou-container h1 {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      color: #2563eb;
+      background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .thankyou-container p {
+      color: #475569;
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+    .thankyou-container button {
+      display: block;
+      margin: 0 auto;
+      padding: 12px 32px;
+      background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
+      transition: background 0.18s, transform 0.18s;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .thankyou-container button:hover {
+      background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+      transform: translateY(-2px) scale(1.04);
+    }
+    @media (max-width: 600px) {
+      .thankyou-container {
+        padding: 24px 4vw 24px 4vw;
+      }
+      .thankyou-container h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-container">
+    <h1>Thank You!</h1>
+    <p>Your message has been sent successfully.<br>I'll get back to you as soon as possible.</p>
+    <button onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</body>
+</html> 

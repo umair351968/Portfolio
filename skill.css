@@ -1,160 +1,131 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background for the whole page */
-    color: #fff;
-    margin: 0;
-    padding: 0;
+  font-family: 'Lora', serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #a1c4fd 50%, #c2e9fb 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
-  
-/* Container Styling */
+
 .container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #333; /* Dark background for the container */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(120deg, #fff 80%, #e0e7ef 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.12);
+  padding: 40px 32px 32px 32px;
+  border: 2px solid #38bdf8;
 }
 
-/* Heading Styling */
 h1 {
-    text-align: center;
-    color: black;}
-    h1:hover{
-       color: white;
-        transform: scale(1.05);
-     
-    }
-
-h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #ddd;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2563eb;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
-
-/* Grid Layout for Cards */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    padding: 20px;
-    animation: fadeInUp 2s ease-out;
+.cards-container, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-bottom: 32px;
 }
 
-/* Card Styling */
-.card {
-    background-color: #333;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
-    animation: slideIn 1s ease-out;
+.card, .skill-card {
+  background: #f7fafc;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(60, 72, 100, 0.08);
+  padding: 28px 22px 22px 22px;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2.5px solid #38bdf8;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover effect for cards */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    filter: brightness(1.2); /* Slightly brightens the card */
+.card::before, .skill-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-/* Glowing effect for text inside card on hover */
-.card:hover h3, 
-.card:hover p, 
-.card:hover ul li {
-    color: #fff; /* Bright white color */
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8), 
-                 0px 0px 25px rgba(255, 255, 255, 0.6); /* Glowing text */
+.card:hover, .skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.16);
+  background: #e0f2fe;
+  border-color: #6366f1;
 }
 
-/* Delay animation for each card */
-.card:nth-child(1) {
-    animation-delay: 0.2s;
+.card h3, .skill-card h3 {
+  margin-top: 0;
+  color: #2563eb;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.card:nth-child(2) {
-    animation-delay: 0.4s;
+.card ul, .skill-card ul {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #475569;
+  padding-left: 18px;
+  line-height: 1.7;
 }
 
-.card:nth-child(3) {
-    animation-delay: 0.6s;
+.card ul li, .skill-card ul li {
+  margin-bottom: 7px;
+  color: #475569;
+  list-style: disc inside;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Card Title Styling */
-.card h3 {
-    color: #ffd700;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-/* Glowing effect for title on hover */
-.card h3:hover {
-    color: #f1f1f1;
-    text-shadow: 0px 0px 15px rgba(0, 0, 255, 0.8), 
-                 0px 0px 25px rgba(0, 0, 255, 0.6); 
-}
-
-/* Card List Styling */
-.card ul {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.card ul li {
-    margin-bottom: 10px;
-    color: #bbb;
-}
-
-/* Adjust 'Back to Home' button */
 button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
+  transition: background 0.18s, transform 0.18s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 18px 4vw 18px 4vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .cards-container, .skills-grid {
+    gap: 16px;
+  }
+  .card, .skill-card {
+    padding: 18px 10px 12px 10px;
+  }
+  button {
+    width: 100%;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  button:hover {
-    background-color: #4682b9;
-     transform: scale(1.05);
-  box-shadow: 0px 0px 8px #4682b4, 0px 0px 15px #4682b4;
-  }
+}
