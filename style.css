@@ -302,7 +302,7 @@
 
   .about-card::before {
     content: '';
-    display: block;
+    display: flex;
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 7px;

@@ -1,3 +1,4 @@
+/* Mobile-first responsive design */
 body {
   font-family: 'Lora', serif;
   background: linear-gradient(120deg, #f8fafc 0%, #a1c4fd 50%, #c2e9fb 100%);
@@ -5,7 +6,8 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-/* Navigation Bar */
+
+/* Navigation Bar - Mobile First */
 .navbar {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
@@ -13,11 +15,11 @@ body {
   box-shadow: 0 4px 24px rgba(60, 72, 100, 0.10);
   border-bottom: 2px solid #38bdf8;
   border-radius: 0 0 18px 18px;
-  padding: 18px 0 12px 0;
+  padding: 12px 0 8px 0;
   position: fixed;
-  width: 90%;
-  left: 5%;
-  top: 18px;
+  width: 95%;
+  left: 2.5%;
+  top: 12px;
   z-index: 1000;
   transition: background 0.3s, box-shadow 0.3s;
 }
@@ -28,7 +30,8 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  gap: 32px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .navbar ul li {
@@ -37,23 +40,24 @@ body {
 
 .navbar ul li a {
   color: #2563eb;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 8px 18px;
+  padding: 6px 12px;
   border-radius: 6px;
   position: relative;
   transition: color 0.2s, background 0.2s;
   text-decoration: none;
   letter-spacing: 0.5px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .navbar ul li a::after {
   content: '';
   display: block;
   position: absolute;
-  left: 18px; right: 18px; bottom: 6px;
-  height: 3px;
+  left: 12px; right: 12px; bottom: 4px;
+  height: 2px;
   border-radius: 2px;
   background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
   transform: scaleX(0);
@@ -68,20 +72,21 @@ body {
 .navbar ul li a:hover::after {
   transform: scaleX(1);
 }
+
 .container {
-  max-width: 500px;
-  margin: 40px auto;
+  max-width: 90%;
+  margin: 80px auto 20px auto;
   background: linear-gradient(120deg, #fff 80%, #e0e7ef 100%);
-  border-radius: 18px;
+  border-radius: 16px;
   box-shadow: 0 8px 32px rgba(60, 72, 100, 0.12);
-  padding: 40px 32px 32px 32px;
+  padding: 24px 20px 20px 20px;
   border: 2px solid #38bdf8;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 24px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   color: #2563eb;
   letter-spacing: 1px;
   background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
@@ -93,7 +98,7 @@ h1 {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .form-group {
@@ -103,7 +108,7 @@ h1 {
 }
 
 label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #2563eb;
   font-weight: 500;
 }
@@ -118,20 +123,23 @@ input, textarea {
   color: #222;
   transition: border-color 0.2s;
   resize: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 input:focus, textarea:focus {
   border-color: #6366f1;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 button[type="submit"] {
-  margin-top: 10px;
+  margin-top: 8px;
   background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: inherit;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
@@ -139,21 +147,22 @@ button[type="submit"] {
   font-weight: bold;
   letter-spacing: 1px;
   padding: 12px 0;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
   background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scale(1.02);
 }
 
 button[onclick] {
-  margin: 24px auto 0 auto;
+  margin: 20px auto 0 auto;
   width: 100%;
   background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: inherit;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
@@ -165,130 +174,177 @@ button[onclick] {
 
 button[onclick]:hover {
   background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scale(1.02);
 }
 
-@media (max-width: 600px) {
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .navbar {
+    width: 92%;
+    left: 4%;
+    top: 15px;
+    padding: 15px 0 10px 0;
+  }
+  
+  .navbar ul {
+    gap: 24px;
+  }
+  
+  .navbar ul li a {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  
+  .navbar ul li a::after {
+    left: 16px; right: 16px; bottom: 5px;
+    height: 3px;
+  }
+  
   .container {
-    padding: 18px 4vw 18px 4vw;
+    max-width: 600px;
+    margin: 100px auto 30px auto;
+    padding: 32px 28px 28px 28px;
+    border-radius: 18px;
   }
+  
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  
+  .contact-form {
+    gap: 18px;
+  }
+  
+  button[type="submit"], button[onclick] {
+    font-size: 1.05rem;
+    padding: 14px 0;
   }
 }
-body {
-  font-family: 'Lora', serif;
-  background: linear-gradient(120deg, #f8fafc 0%, #a1c4fd 50%, #c2e9fb 100%);
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
 
-.container {
-  max-width: 500px;
-  margin: 40px auto;
-  background: linear-gradient(120deg, #fff 80%, #e0e7ef 100%);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.12);
-  padding: 40px 32px 32px 32px;
-  border: 2px solid #38bdf8;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 24px;
-  color: #2563eb;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #2563eb 30%, #38bdf8 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-label {
-  font-size: 1rem;
-  color: #2563eb;
-  font-weight: 500;
-}
-
-input, textarea {
-  padding: 12px;
-  border: 2px solid #38bdf8;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  background: #f7fafc;
-  color: #222;
-  transition: border-color 0.2s;
-  resize: none;
-}
-
-input:focus, textarea:focus {
-  border-color: #6366f1;
-  outline: none;
-}
-
-button[type="submit"] {
-  margin-top: 10px;
-  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-family: inherit;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
-  transition: background 0.18s, transform 0.18s;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 12px 0;
-}
-
-button[type="submit"]:hover {
-  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
-  transform: translateY(-2px) scale(1.04);
-}
-
-button[onclick] {
-  margin: 24px auto 0 auto;
-  width: 100%;
-  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-family: inherit;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
-  transition: background 0.18s, transform 0.18s;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 12px 0;
-}
-
-button[onclick]:hover {
-  background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
-  transform: translateY(-2px) scale(1.04);
-}
-
-@media (max-width: 600px) {
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .navbar {
+    width: 90%;
+    left: 5%;
+    top: 18px;
+    padding: 18px 0 12px 0;
+  }
+  
+  .navbar ul {
+    gap: 32px;
+  }
+  
+  .navbar ul li a {
+    font-size: 1.1rem;
+    padding: 8px 18px;
+  }
+  
+  .navbar ul li a::after {
+    left: 18px; right: 18px; bottom: 6px;
+    height: 3px;
+  }
+  
   .container {
-    padding: 18px 4vw 18px 4vw;
+    max-width: 500px;
+    margin: 120px auto 40px auto;
+    padding: 40px 32px 32px 32px;
   }
+  
   h1 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+  }
+  
+  .contact-form {
+    gap: 18px;
+  }
+  
+  button[type="submit"], button[onclick] {
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 550px;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Landscape Mobile Styles */
+@media (max-width: 767px) and (orientation: landscape) {
+  .navbar {
+    top: 8px;
+    padding: 8px 0 6px 0;
+  }
+  
+  .container {
+    margin: 70px auto 15px auto;
+    padding: 20px 16px 16px 16px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  
+  .contact-form {
+    gap: 14px;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .navbar {
+    border-bottom-width: 1px;
+  }
+  
+  .container {
+    border-width: 1px;
+  }
+  
+  input, textarea {
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .navbar ul li a,
+  button[type="submit"],
+  button[onclick] {
+    transition: none;
+  }
+  
+  .navbar ul li a::after {
+    transition: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(120deg, #1e293b 0%, #334155 50%, #475569 100%);
+  }
+  
+  .container {
+    background: linear-gradient(120deg, #334155 80%, #475569 100%);
+    color: #f1f5f9;
+  }
+  
+  input, textarea {
+    background: #475569;
+    color: #f1f5f9;
+    border-color: #64748b;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #38bdf8;
   }
 }
